@@ -10,7 +10,7 @@ from mimicmotion.utils.loader import create_pipeline      # builds the generatio
 from mimicmotion.utils.utils import save_to_mp4_custom    # saves tensor frames as MP4
 from utils.text_processing import TextProcessor           # maps text to video file paths
 from utils.video_processor import VideoProcessor          # preprocesses videos and runs pipeline
-from constants import ASPECT_RATIO                        # likely defines target aspect ratio
+from constants import ASPECT_RATIO                        # defines target aspect ratio
 
 # ----------------------------------------------------------------------
 # Logging setup – a basic console logger; later a file handler may be added.
