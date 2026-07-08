@@ -156,7 +156,6 @@ cython_debug/
 _.*
 
 # models and outputs
-models/
 outputs/
 *.mp4
 *.jpg
@@ -164,7 +163,6 @@ outputs/
 *.msgpack
 *.bin
 *.onnx
-*.pth
 tagme_mimic/
 *.mov
 debug_output/
