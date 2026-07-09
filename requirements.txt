@@ -1,7 +1,7 @@
 diffusers==0.27.0
 transformers>=4.36.0          # or just 4.36.0
 sentence_transformers>=2.2.2  # latest stable
-huggingface-hub==0.23.0
+huggingface-hub
 decord==0.6.0
 einops
 omegaconf
@@ -14,5 +14,5 @@ nltk
 pymystem3
 numpy
 pandas
-pillow==9.2.0
+pillow
 faiss-gpu
