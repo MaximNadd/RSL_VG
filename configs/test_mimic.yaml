@@ -7,9 +7,9 @@ pos_net_path:
 
 # Input and output paths
 video_folder: "/kaggle/input/datasets/maximnaddaf/solvo-videos/solvo_videos"
-csv_path: "misc/annotations_cleared_19.06.2023_SLOVO.csv"
-embeddings_path: "misc/gloss_embeddings_SLOVO.npy"
-gloss_words_path: "misc/gloss_words_SLOVO.txt"
+csv_path: "/kaggle/input/datasets/maximnaddaf/misc-data/misc/annotations_cleared_19.06.2023_SLOVO.csv"
+embeddings_path: "/kaggle/input/datasets/maximnaddaf/misc-data/misc/gloss_embeddings_SLOVO.npy"
+gloss_words_path: "/kaggle/input/datasets/maximnaddaf/misc-data/misc/gloss_words_SLOVO.txt"
 output_dir: "outputs/"
 no_use_float16: false
 input_text: "Я очень тебя люблю"        # Provide text if needed
