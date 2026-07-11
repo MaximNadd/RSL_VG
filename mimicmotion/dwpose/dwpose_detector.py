@@ -59,6 +59,6 @@ class DWposeDetector:
             return pose
 
 dwpose_detector = DWposeDetector(
-    model_det="models/DWPose/yolox_l.onnx",
-    model_pose="models/DWPose/dw-ll_ucoco_384.onnx",
+    model_det="/kaggle/input/datasets/maximnaddaf/model-weights/models/DWPose/yolox_l.onnx",
+    model_pose="/kaggle/input/datasets/maximnaddaf/model-weights/models/DWPose/dw-ll_ucoco_384.onnx",
     device=device)
