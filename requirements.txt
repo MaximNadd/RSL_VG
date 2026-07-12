@@ -16,3 +16,4 @@ numpy
 pandas
 pillow
 faiss-gpu
+onnxruntime
