@@ -149,6 +149,9 @@ def main(config):
         # video_frames is a 4D tensor: [T, C, H, W] (frames, channels, height, width)
         all_video_frames.append(video_frames)
 
+        print("processing next video")
+        print("\n")
+
     # ------------------------------------------------------------------
     # 7. Concatenate all generated clips into one continuous video
     # ------------------------------------------------------------------
@@ -164,6 +167,9 @@ def main(config):
         str(output_path),
         fps=task_config.fps
     )
+
+
+    print(f"Video saved to {output_path}")
 
     logger.info(f"Video saved to {output_path}")
     logger.info("--- Finished ---")
