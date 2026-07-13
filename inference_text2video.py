@@ -114,6 +114,8 @@ def main(config):
     # which holds resolution, sampling stride, fps, etc. for this run.
     task_config = config.test_case[0]
 
+    for v_p in video_paths:
+        print(v_p)
 
     for video_path in video_paths:
         print(video_path)
