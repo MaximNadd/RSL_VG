@@ -166,7 +166,7 @@ class TextProcessor:
                     video_path_full = None
 
             # Append the result tuple for this specific lemma.
-            results.append([video_path_full])
+            results.append(video_path_full)
 
         # Return the list of results. The order here directly corresponds
         # to the order of words in 'all_lemmatized_words'.
