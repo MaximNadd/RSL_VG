@@ -89,10 +89,9 @@ def main(config):
     # ------------------------------------------------------------------
     # 5. Determine input source: video list file OR free‑text query
     # ------------------------------------------------------------------
-    video_list = config.get('video_folder', "")
     input_text = config.get('input_text', "")
 
-    if not video_list and not input_text:
+    if not input_text:
         logger.info("No input provided. Exiting.")
         return
 
@@ -102,13 +101,6 @@ def main(config):
         if not video_paths:
             logger.info("No videos found for the given text. Exiting.")
             return
-    else:
-        # Case B: read video paths from a file (one per line)
-        with open(video_list, 'r') as f:
-            video_paths = [line.strip() for line in f if line.strip()]
-            if not video_paths:
-                logger.info("No videos found in video list. Exiting.")
-                return
 
     # ------------------------------------------------------------------
     # 6. Process each video, collect generated frame tensors
@@ -118,7 +110,11 @@ def main(config):
     # which holds resolution, sampling stride, fps, etc. for this run.
     task_config = config.test_case[0]
 
+    print(type(video_paths))
+
+
     for video_path in video_paths:
+        print(type(video_path))
         logger.info(f"Processing video: {video_path}")
 
         # ------------------------------------------------------------------
