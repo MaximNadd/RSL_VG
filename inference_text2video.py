@@ -89,7 +89,7 @@ def main(config):
     # ------------------------------------------------------------------
     # 5. Determine input source: video list file OR free‑text query
     # ------------------------------------------------------------------
-    video_list = config.get('video_list', "")
+    video_list = config.get('video_folder', "")
     input_text = config.get('input_text', "")
 
     if not video_list and not input_text:
