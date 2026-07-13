@@ -110,7 +110,7 @@ def create_pipeline(infer_config, device,
         mimicmotion_models = MimicMotionModel(infer_config.base_model_path).to(device=device).eval()
         # Load the weights with strict=False – this allows missing keys (e.g., pose_net
         # may be absent in the checkpoint if it was not trained yet) without crashing.
-        mimicmotion_models.load_state_dict(torch.load(infer_config.ckpt_path, map_location=device), strict=False, weights_only=False)
+        mimicmotion_models.load_state_dict(torch.load(infer_config.ckpt_path, map_location=device, weights_only=False), strict=False)
 
     # Build the actual Diffusers-style pipeline by passing all sub‑models.
     pipeline = MimicMotionPipeline(
