@@ -7,7 +7,7 @@ unet_path:
 pos_net_path: 
 
 # Input and output paths
-video_folder: "/kaggle/input/datasets/maximnaddaf/solvo-videos/solvo_videos"
+video_folder: "/kaggle/input/datasets/maximnaddaf/Solvo_Videos/solvo_videos"
 csv_path: "/kaggle/input/datasets/maximnaddaf/misc_data/misc/annotations_cleared_19.06.2023_SLOVO.csv"
 embeddings_path: "/kaggle/input/datasets/maximnaddaf/misc_data/misc/gloss_embeddings_SLOVO.npy"
 gloss_words_path: "/kaggle/input/datasets/maximnaddaf/misc_data/misc/gloss_words_SLOVO.txt"
