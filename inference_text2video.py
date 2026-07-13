@@ -110,11 +110,9 @@ def main(config):
     # which holds resolution, sampling stride, fps, etc. for this run.
     task_config = config.test_case[0]
 
-    print(type(video_paths))
-
 
     for video_path in video_paths:
-        print(type(video_path))
+        print(video_path)
         logger.info(f"Processing video: {video_path}")
 
         # ------------------------------------------------------------------
