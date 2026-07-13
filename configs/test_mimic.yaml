@@ -1,6 +1,6 @@
 # Base model path
 base_model_path: /kaggle/input/datasets/maximnaddaf/model-weights/models/SVD/stable-video-diffusion-img2vid-xt-1-1
-ckpt_path: /kaggle/input/datasets/maximnaddaf/model-weights/models/MimicMotion.pth
+ckpt_path: /kaggle/input/datasets/maximnaddaf/model-weights/MimicMotion_1-1.pth
 
 # Paths to unet and pose_net
 unet_path: 
