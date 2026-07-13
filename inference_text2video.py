@@ -132,6 +132,7 @@ def main(config):
         # ------------------------------------------------------------------
         # The pipeline uses the reference image as appearance and the pose sequence
         # as motion guidance to produce a video of the same length as the pose sequence.
+        pipeline.enable_sequential_cpu_offload()
         video_frames = video_processor.run_pipeline(
             pipeline,
             image_pixels,
