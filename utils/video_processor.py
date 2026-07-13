@@ -176,6 +176,8 @@ class VideoProcessor:
         #    - min/max_guidance_scale: classifier-free guidance scale (control adherence to poses).
         #    - decode_chunk_size: number of latents to decode at once (memory optimization).
         #    - output_type: "pt" returns PyTorch tensors.
+        pipeline.enable_sequential_cpu_offload()
+        pipeline.vae.enable_tiling()
         frames = pipeline(
             image_pixels,
             image_pose=pose_pixels,
@@ -190,7 +192,7 @@ class VideoProcessor:
             generator=generator,
             min_guidance_scale=task_config.guidance_scale,
             max_guidance_scale=task_config.guidance_scale,
-            decode_chunk_size=8,
+            decode_chunk_size=4,
             output_type="pt",
             device=device
         ).frames.cpu()  # Move the generated frames from GPU to CPU.

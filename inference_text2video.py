@@ -12,6 +12,10 @@ from utils.text_processing import TextProcessor           # maps text to video f
 from utils.video_processor import VideoProcessor          # preprocesses videos and runs pipeline
 from constants import ASPECT_RATIO                        # defines target aspect ratio
 
+
+import os
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
+
 # ----------------------------------------------------------------------
 # Logging setup – a basic console logger; later a file handler may be added.
 # ----------------------------------------------------------------------
@@ -132,13 +136,12 @@ def main(config):
         # ------------------------------------------------------------------
         # The pipeline uses the reference image as appearance and the pose sequence
         # as motion guidance to produce a video of the same length as the pose sequence.
-        pipeline.enable_sequential_cpu_offload()
         video_frames = video_processor.run_pipeline(
             pipeline,
             image_pixels,
             pose_pixels,
             device,
-            task_config
+            task_config,
         )
 
         # video_frames is a 4D tensor: [T, C, H, W] (frames, channels, height, width)
