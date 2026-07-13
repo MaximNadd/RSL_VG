@@ -15,7 +15,7 @@ output_dir: "/kaggle/working/Videos/"
 no_use_float16: false
 input_text: "Я очень тебя люблю"        # Provide text if needed
 video_list: ""         # Provide a video list file if needed
-log_file: "outputs/log.txt"
+log_file: "/kaggle/working/Videos/log.txt"
 
 test_case:
   - ref_image_path: "/kaggle/working/RSL_VG/assets/example_data/images/b3994747-5ed0-4afb-a173-a8858dcde63c.jpeg"
