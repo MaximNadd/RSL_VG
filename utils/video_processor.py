@@ -176,7 +176,6 @@ class VideoProcessor:
         #    - min/max_guidance_scale: classifier-free guidance scale (control adherence to poses).
         #    - decode_chunk_size: number of latents to decode at once (memory optimization).
         #    - output_type: "pt" returns PyTorch tensors.
-        pipeline.enable_model_cpu_offload()
         pipeline.vae.enable_tiling()
         frames = pipeline(
             image_pixels,
