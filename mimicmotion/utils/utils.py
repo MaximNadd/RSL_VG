@@ -2,7 +2,7 @@ import logging
 from pathlib import Path
 import numpy as np
 import imageio
-from moviepy import ImageSequenceClip
+from moviepy.video.io.ImageSequenceClip import ImageSequenceClip
 
 import cv2
 import torch
