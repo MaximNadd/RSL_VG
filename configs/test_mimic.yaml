@@ -13,7 +13,7 @@ embeddings_path: "/kaggle/input/datasets/maximnaddaf/misc-data/misc/gloss_embedd
 gloss_words_path: "/kaggle/input/datasets/maximnaddaf/misc-data/misc/gloss_words_SLOVO.txt"
 output_dir: "/kaggle/working/Videos/"
 no_use_float16: false
-input_text: "Где ты хочешь пообедать?"        # Provide text if needed
+input_text: "Когда ты хочешь встретиться?"        # Provide text if needed
 video_list: ""         # Provide a video list file if needed
 log_file: "/kaggle/working/Videos/log.txt"
 
