@@ -52,8 +52,8 @@ def main(config):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     # If the config does NOT disable float16, set the default tensor type to half precision.
     # This speeds up inference and reduces memory on supported GPUs.
-    if not config.get('no_use_float16', False):
-        torch.set_default_dtype(torch.float16)
+    # if not config.get('no_use_float16', False):
+    #     torch.set_default_dtype(torch.float16)
 
     # ------------------------------------------------------------------
     # 2. Initialize helper classes

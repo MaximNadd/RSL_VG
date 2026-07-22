@@ -191,7 +191,7 @@ class VideoProcessor:
             generator=generator,
             min_guidance_scale=task_config.guidance_scale,
             max_guidance_scale=task_config.guidance_scale,
-            decode_chunk_size=6,
+            decode_chunk_size=4,
             output_type="pt",
             device=device
         ).frames.cpu()  # Move the generated frames from GPU to CPU.
