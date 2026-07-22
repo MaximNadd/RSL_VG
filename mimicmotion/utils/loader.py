@@ -39,23 +39,19 @@ class MimicMotionModel(torch.nn.Module):
 
         # --- VAE (temporal decoder) ---
         # Load the pretrained AutoencoderKLTemporalDecoder from the base path and cast to FP16.
-        self.vae = AutoencoderKLTemporalDecoder.from_pretrained(
-            base_model_path, subfolder="vae").half()
+        self.vae = AutoencoderKLTemporalDecoder.from_pretrained(base_model_path, subfolder="vae", torch_dtype=torch.float16)
 
         # --- CLIP image encoder ---
         # The vision encoder produces embeddings for the reference image.
-        self.image_encoder = CLIPVisionModelWithProjection.from_pretrained(
-            base_model_path, subfolder="image_encoder")
+        self.image_encoder = CLIPVisionModelWithProjection.from_pretrained(base_model_path, subfolder="image_encoder")
 
         # --- Noise scheduler ---
         # Euler scheduler is used for the diffusion sampling process.
-        self.noise_scheduler = EulerDiscreteScheduler.from_pretrained(
-            base_model_path, subfolder="scheduler")
+        self.noise_scheduler = EulerDiscreteScheduler.from_pretrained(base_model_path, subfolder="scheduler")
 
         # --- CLIP feature extractor ---
         # Preprocesses input images to the format expected by the CLIP encoder.
-        self.feature_extractor = CLIPImageProcessor.from_pretrained(
-            base_model_path, subfolder="feature_extractor")
+        self.feature_extractor = CLIPImageProcessor.from_pretrained(base_model_path, subfolder="feature_extractor")
 
         # --- PoseNet ---
         if pos_net_base_path:
