@@ -30,15 +30,16 @@ class MimicMotionModel(torch.nn.Module):
         # --- UNet ---
         if unet_base_path:
             # Load the UNet from a specific checkpoint and cast to FP16 for efficiency.
-            self.unet = UNetSpatioTemporalConditionModel.from_pretrained(unet_base_path)
+            self.unet = UNetSpatioTemporalConditionModel.from_pretrained(unet_base_path).half()
         else:
             # Load only the UNet configuration from the base model's subfolder.
             # No pretrained weights are loaded here.
-            self.unet = UNetSpatioTemporalConditionModel.from_config(UNetSpatioTemporalConditionModel.load_config(base_model_path, subfolder="unet", torch_dtype=torch.float16))
+            self.unet = UNetSpatioTemporalConditionModel.from_config(
+                UNetSpatioTemporalConditionModel.load_config(base_model_path, subfolder="unet"))
 
         # --- VAE (temporal decoder) ---
         # Load the pretrained AutoencoderKLTemporalDecoder from the base path and cast to FP16.
-        self.vae = AutoencoderKLTemporalDecoder.from_pretrained(base_model_path, subfolder="vae", torch_dtype=torch.float16)
+        self.vae = AutoencoderKLTemporalDecoder.from_pretrained(base_model_path, subfolder="vae").half()
 
         # --- CLIP image encoder ---
         # The vision encoder produces embeddings for the reference image.
