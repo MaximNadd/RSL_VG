@@ -12,8 +12,8 @@ csv_path: "/kaggle/input/datasets/maximnaddaf/misc-data/misc/annotations_cleared
 embeddings_path: "/kaggle/input/datasets/maximnaddaf/misc-data/misc/gloss_embeddings_SLOVO.npy"
 gloss_words_path: "/kaggle/input/datasets/maximnaddaf/misc-data/misc/gloss_words_SLOVO.txt"
 output_dir: "/kaggle/working/Videos/"
-no_use_float16: True 
-input_text: "Где найти этот ресторан?"        # Provide text if needed
+no_use_float16: false
+input_text: "Может быть, мы сможем перенести встречу на следующую неделю?"        # Provide text if needed
 video_list: ""         # Provide a video list file if needed
 log_file: "/kaggle/working/Videos/log.txt"
 
