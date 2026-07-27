@@ -39,7 +39,7 @@ class MimicMotionModel(torch.nn.Module):
 
         # --- VAE (temporal decoder) ---
         # Load the pretrained AutoencoderKLTemporalDecoder from the base path and cast to FP16.
-        self.vae = AutoencoderKLTemporalDecoder.from_pretrained(base_model_path, subfolder="vae").half()
+        self.vae = AutoencoderKLTemporalDecoder.from_pretrained(base_model_path, subfolder="vae")
 
         # --- CLIP image encoder ---
         # The vision encoder produces embeddings for the reference image.
