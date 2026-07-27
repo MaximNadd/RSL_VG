@@ -15,3 +15,10 @@ https://github.com/user-attachments/assets/46a74663-d367-4d41-b5a7-c78de07b1638
 # 3. "Когда ты хочешь встретиться?"
 
 https://github.com/user-attachments/assets/b7bb6c10-88e2-4ed7-bf98-ce208daf860e
+
+<br>
+
+# 4. "Может быть, мы сможем перенести встречу на следующую неделю?"
+
+https://github.com/user-attachments/assets/d187badb-6d2d-4f98-934b-ccaf771727c5
+
