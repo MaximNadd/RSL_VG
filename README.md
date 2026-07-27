@@ -22,3 +22,9 @@ https://github.com/user-attachments/assets/b7bb6c10-88e2-4ed7-bf98-ce208daf860e
 
 https://github.com/user-attachments/assets/d187badb-6d2d-4f98-934b-ccaf771727c5
 
+<br>
+
+$ 5. "Спасибо"
+
+https://github.com/user-attachments/assets/dac51ce5-8f0a-4d84-b0dc-ec1a1ea15046
+
