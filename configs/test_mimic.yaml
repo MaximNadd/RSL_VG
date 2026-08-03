@@ -21,7 +21,7 @@ test_case:
   - ref_image_path: "/kaggle/working/RSL_VG/assets/example_data/images/b3994747-5ed0-4afb-a173-a8858dcde63c.jpeg"
     num_frames: 72
     resolution: 1024
-    frames_overlap: 12
+    frames_overlap: 6
     num_inference_steps: 45
     noise_aug_strength: 0
     guidance_scale: 2.5

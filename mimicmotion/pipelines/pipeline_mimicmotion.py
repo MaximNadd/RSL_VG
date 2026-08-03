@@ -236,7 +236,7 @@ class MimicMotionPipeline(DiffusionPipeline):
         self, 
         latents: torch.Tensor, 
         num_frames: int, 
-        decode_chunk_size: int = 72):
+        decode_chunk_size: int = 8):
         # [batch, frames, channels, height, width] -> [batch*frames, channels, height, width]
         latents = latents.flatten(0, 1)
 
