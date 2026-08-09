@@ -26,5 +26,5 @@
 
 # 5. "Спасибо"
 
-https://github.com/user-attachments/assets/dac51ce5-8f0a-4d84-b0dc-ec1a1ea15046
+https://github.com/user-attachments/assets/64b64c56-e50d-42e6-838d-2687baf43390
 
