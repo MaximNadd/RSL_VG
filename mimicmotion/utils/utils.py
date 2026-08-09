@@ -32,7 +32,7 @@ def save_to_mp4(frames, save_path, fps=7):
     Path(save_path).parent.mkdir(parents=True, exist_ok=True)
     write_video(save_path, frames, fps=fps)
 
-def save_to_mp4_custom(frames, save_path, fps=20):
+def save_to_mp4_custom(frames, save_path, fps=14):
     """
     Save a sequence of frames to an MP4 video file using imageio.
 
