@@ -18,7 +18,7 @@ video_list: ""         # Provide a video list file if needed
 log_file: "/kaggle/working/Videos/log.txt"
 
 test_case:
-  - ref_image_path: "/kaggle/working/RSL_VG/assets/example_data/images/image2.jpg"
+  - ref_image_path: "/kaggle/working/RSL_VG/assets/example_data/images/image1.jpg"
     num_frames: 16
     resolution: 576
     frames_overlap: 6
