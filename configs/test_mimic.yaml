@@ -20,11 +20,11 @@ log_file: "/kaggle/working/Videos/log.txt"
 test_case:
 ref_image_path: "/kaggle/working/RSL_VG/assets/example_data/images/image1.png"
 num_frames: 16
-resolution: 384              # Lower resolution = less distortion
-frames_overlap: 4
-num_inference_steps: 12      # Crucial change
+resolution: 384              # Lower = less detail to mess up
+frames_overlap: 6            # Keep this if you like smoother transitions
+num_inference_steps: 12      # MOST IMPORTANT FIX
 noise_aug_strength: 0
-guidance_scale: 2.2          # Let the model breathe
-sample_stride: 4             # Smoother pose transitions
+guidance_scale: 2.2          # SECOND MOST IMPORTANT
+sample_stride: 4             # REDUCE FRAME DENSITY
 fps: 15
 seed: 42
