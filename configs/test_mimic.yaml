@@ -13,7 +13,7 @@ embeddings_path: "/kaggle/input/datasets/maximnaddaf/misc-data/misc/gloss_embedd
 gloss_words_path: "/kaggle/input/datasets/maximnaddaf/misc-data/misc/gloss_words_SLOVO.txt"
 output_dir: "/kaggle/working/Videos/"
 no_use_float16: false
-input_text: "Спасибо"        # Provide text if needed
+input_text: "Я очень тебя люблю"        # Provide text if needed
 video_list: ""         # Provide a video list file if needed
 log_file: "/kaggle/working/Videos/log.txt"
 
@@ -22,9 +22,9 @@ test_case:
     num_frames: 16
     resolution: 576
     frames_overlap: 6
-    num_inference_steps: 30
+    num_inference_steps: 25
     noise_aug_strength: 0
-    guidance_scale: 3.0
+    guidance_scale: 2.5
     sample_stride: 2
     fps: 15
     seed: 42
