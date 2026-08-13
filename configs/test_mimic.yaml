@@ -20,7 +20,7 @@ log_file: "/kaggle/working/Videos/log.txt"
 test_case:
   - ref_image_path: "/kaggle/working/RSL_VG/assets/example_data/images/image1.png"
     num_frames: 24
-    resolution: 576
+    resolution: 384
     frames_overlap: 8
     num_inference_steps: 30
     noise_aug_strength: 0
