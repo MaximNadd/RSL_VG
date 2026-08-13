@@ -24,7 +24,7 @@ test_case:
     frames_overlap: 6
     num_inference_steps: 30
     noise_aug_strength: 0
-    guidance_scale: 2.5
+    guidance_scale: 2.0
     sample_stride: 1
     fps: 15
     seed: 42
