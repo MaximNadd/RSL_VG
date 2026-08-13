@@ -25,6 +25,6 @@ test_case:
     num_inference_steps: 18
     noise_aug_strength: 0
     guidance_scale: 2.2
-    sample_stride: 3
+    sample_stride: 2
     fps: 15
     seed: 42
