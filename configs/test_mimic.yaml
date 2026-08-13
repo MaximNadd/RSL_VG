@@ -22,9 +22,9 @@ test_case:
     num_frames: 16
     resolution: 576
     frames_overlap: 6
-    num_inference_steps: 15
+    num_inference_steps: 18
     noise_aug_strength: 0
     guidance_scale: 2.2
-    sample_stride: 4
+    sample_stride: 3
     fps: 15
     seed: 42
