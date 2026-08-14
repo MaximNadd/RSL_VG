@@ -6,10 +6,7 @@ from .util import draw_pose
 from .dwpose_detector import dwpose_detector as dwprocessor
 
 
-def get_video_pose(
-        video_path: str,
-        ref_image: np.ndarray,
-        sample_stride: int=1):
+def get_video_pose(video_path: str, ref_image: np.ndarray, sample_stride: int=1):
     """preprocess ref image pose and video pose
 
     Args:
@@ -69,65 +66,3 @@ def get_image_pose(ref_image):
     ref_pose = dwprocessor(ref_image)
     pose_img = draw_pose(ref_pose, height, width)
     return np.array(pose_img)
-
-def get_video_pose_new(
-        video_path: str, 
-        ref_image: np.ndarray,
-        sample_stride: int=1):
-    """preprocess ref image pose and video pose
-
-    Args:
-        video_path (str): video pose path
-        ref_image (np.ndarray): reference image 
-        sample_stride (int, optional): Defaults to 1.
-
-    Returns:
-        np.ndarray: sequence of video pose
-    """
-
-
-    # read input video
-    vr = decord.VideoReader(video_path, ctx=decord.cpu(0))
-    sample_stride *= max(1, int(vr.get_avg_fps() / 24))
-
-    # Read frames with the specified stride
-    frame_indices = list(range(0, len(vr), sample_stride))
-    frames = vr.get_batch(frame_indices).asnumpy()
-
-    # Convert frames from BGR to RGB if needed
-    target_height, target_width = ref_image.shape[:2]
-    frames_rgb_resized = []
-    for frame in frames:
-        original_height, original_width = frame.shape[:2]
-
-        # Resize while maintaining aspect ratio
-        aspect_ratio = original_width / original_height
-        if (target_width / target_height) > aspect_ratio:
-            new_height = target_height
-            new_width = int(aspect_ratio * target_height)
-        else:
-            new_width = target_width
-            new_height = int(target_width / aspect_ratio)
-
-        resized_frame = cv2.resize(frame, (new_width, new_height))
-
-        # If the resized frame doesn't match the target dimensions exactly, pad with black
-        if new_width != target_width or new_height != target_height:
-            padded_frame = np.zeros((target_height, target_width, 3), dtype=np.uint8)
-            start_x = (target_width - new_width) // 2
-            start_y = (target_height - new_height) // 2
-            padded_frame[start_y:start_y + new_height, start_x:start_x + new_width] = resized_frame
-            resized_frame = padded_frame
-
-        # Create a mask where the white pixels are
-        white_mask = cv2.inRange(resized_frame, (240, 240, 240), (255, 255, 255))
-
-        # Set white pixels to black
-        resized_frame[white_mask == 255] = (0, 0, 0)
-
-        frame_rgb = cv2.cvtColor(resized_frame, cv2.COLOR_BGR2RGB).transpose(2, 0, 1)
-        frames_rgb_resized.append(frame_rgb)
-
-    return np.array(frames_rgb_resized)
-
-
