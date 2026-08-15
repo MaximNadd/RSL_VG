@@ -18,13 +18,13 @@ video_list: ""         # Provide a video list file if needed
 log_file: "/kaggle/working/Videos/log.txt"
 
 test_case:
-  - ref_image_path: "/kaggle/working/RSL_VG/assets/example_data/images/image.png"
+  - ref_image_path: "/kaggle/working/RSL_VG/assets/example_data/images/image1.png"
     num_frames: 16
     resolution: 576
     frames_overlap: 6
     num_inference_steps: 30
     noise_aug_strength: 0
-    guidance_scale: 2.0
+    guidance_scale: 3.0
     sample_stride: 2
     fps: 15
     seed: 42
